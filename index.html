@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TXT文件批量上传</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/docx@7.7.0/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="upload-box" id="dropZone">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <h2>拖放文件到这里上传</h2>
+            <p>支持批量上传TXT文件（最多5个）</p>
+            <div class="counter">已选择文件：<span id="fileCount">0</span> 个</div>
+        </div>
+        <div class="file-list" id="fileList"></div>
+        <button class="convert-btn" id="convertBtn">转换为DOCX</button>
+    <div class="conversion-status" id="conversionStatus"></div>
+</div>
+    <script src="particleSystem.js" type="module"></script>
+<script src="script.js"></script>
+<script type="module">
+  import { initParticleSystem } from './particleSystem.js';
+  document.addEventListener('DOMContentLoaded', initParticleSystem);
+</script>
+</body>
+</html>

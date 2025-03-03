@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+:root {
+    --primary: #6C63FF;
+    --secondary: #4A47FF;
+    --background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+.upload-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed var(--primary);
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.upload-box:hover {
+    border-color: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.2);
+}
+
+.upload-box i {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.upload-box h2 {
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.counter {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #a0a0a0;
+}
+
+.file-list {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.file-list-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.file-name {
+    color: var(--primary);
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-size {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+}

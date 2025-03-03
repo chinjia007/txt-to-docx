@@ -1,0 +1,27 @@
+{
+  "name": "txt-converter",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "electron": "^28.1.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.6.2"
+  },
+  "build": {
+    "appId": "com.example.txtconverter",
+    "productName": "TXT文件转换工具",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    }
+  }
+}
